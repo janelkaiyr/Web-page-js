@@ -1,0 +1,969 @@
+@import "reset.scss";
+@import "var.scss";
+@import "mixins.scss";
+@import "preloader.scss";
+
+body {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/*темная и светлая тема*/
+
+.theme {
+    top: 78px;
+    right: 90%;
+    padding: 10px;
+    position: absolute;
+    cursor: pointer;
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+}
+
+/**навигация и header*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: $white;
+    z-index: 2;
+
+    .progress-bar {
+        left: 0;
+        top: 0;
+        height: 6px;
+        width: 0%;
+        background-color: $pink;
+    }
+
+
+    &__wrap {
+        margin: auto;
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .hamb {
+            display: none;
+        }
+
+
+        .nav__menu {
+            display: flex;
+            justify-content: space-between;
+            background-color: $white;
+            transition: all 0.7s ease-in-out;
+            flex-wrap: wrap;
+
+            .menu__nav-link {
+                list-style: none;
+                transition: all 0.7s ease-in-out;
+                align-items: stretch;
+
+                :hover {
+                    color: $green;
+                    border: solid $green;
+                    border-radius: 10px 0;
+                }
+            }
+
+            a {
+                color: #292929;
+                text-decoration: none;
+                font-size: 14px;
+                height: 16px;
+                width: fit-content;
+                padding: 2px 7px;
+                border: solid $white;
+                border-radius: 10px 0;
+            }
+
+            .nav__signin {
+                background-color: $pink;
+                color: $white;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 15px 0;
+                border: none;
+                width: auto;
+                min-width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .nav__logo {
+            width: auto;
+            min-width: 70px;
+        }
+
+
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+}
+
+
+.popup {
+    display: none;
+}
+
+
+
+
+.go-top {
+    position: fixed;
+    right: 20px;
+    top: 80%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0;
+    border: none;
+    background-color: $brown;
+    padding: 15px 10px;
+
+    &__show {
+        display: block;
+    }
+}
+
+
+
+/**главная страница */
+
+.main-page {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 34vw 36vw;
+    place-items: center;
+    margin: 4vh 0;
+    padding: 15vh 15vw;
+
+
+    &__caption1 {
+        @include caption_small()
+    }
+
+    &__caption2 {
+        @include caption_large(4vw, 600)
+    }
+
+    &__text {
+        @include text();
+    }
+
+    button {
+        @include btn-green();
+    }
+
+    &____block2 {
+        position: relative;
+    }
+
+
+    img {
+        @include img(37vw);
+
+    }
+
+}
+
+.main-page__img-border {
+    @include img_border(37vw);
+    height: 32vw;
+}
+
+/*страница с сервисами */
+
+
+.service-page {
+    margin: 5vw 0;
+    padding: 2vw 10vw 2vw 15vw;
+
+
+    &__caption1 {
+        @include caption_small();
+        padding-bottom: 5px;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500)
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: baseline;
+        gap: 3vw;
+
+        input[type="button"] {
+            background-color: $green;
+            border-radius: 10px;
+            border: $green ;
+            width: 150px;
+            height: 30px;
+            color: $white;
+            cursor: pointer;
+
+            &.active {
+                border: solid $green;
+                color: $green;
+                background-color: $white;
+            }
+
+
+
+        }
+
+    }
+
+    &__block {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        justify-content: center;
+
+    }
+
+    .block__category {
+        display: flex;
+        width: 250px;
+        background-color: $pink;
+        color: $white;
+        border-radius: 25px 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+        align-items: center;
+
+        .block__caption {}
+
+        img {
+            width: 30px;
+            height: auto;
+            padding-right: 10px;
+        }
+
+        &.interior,
+        &.planning {
+            background-color: $white;
+            color: $black;
+        }
+
+
+    }
+}
+
+/* про компанию*/
+
+.aboutus-page {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 34vw 33vw;
+    margin: 5vw 0;
+    padding: 5vw 0vw;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        @include img(30vw);
+    }
+
+    &__img-border {
+        @include img_border(30vw);
+        height: 31vw;
+    }
+
+    &__caption1 {
+        @include caption_small();
+    }
+
+    button {
+        @include btn-green();
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        margin-top: 5vw;
+    }
+
+    &__text {
+        @include text();
+
+    }
+
+
+
+}
+
+/* 20лет с компанией */
+.years-page {
+    display: flex;
+    gap: 10vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw 0;
+    padding: 5vw 15vw;
+    flex-wrap: nowrap;
+
+    img {
+        @include img(34vw)
+    }
+
+    &__img-border {
+        @include img_border(34vw);
+        height: 36vw;
+    }
+
+    &__block1 {
+        width: 30vw;
+    }
+
+    &__caption1 {
+        color: $brown;
+        background-image: url("img/img_news1.png");
+        font-size: 14vw;
+        font-family: $open-sans;
+        font-weight: 700;
+    }
+
+    button {
+        @include btn-green();
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        width: 20vw;
+    }
+
+}
+
+/*проекты которые были завершины  */
+.workdone-page {
+    text-align: center;
+    background-color: $dark_white;
+    margin: 5vw 0;
+    padding: 5vw 15vw;
+
+    &__caption {
+        text-align: center;
+        @include caption_large(2vw, 500);
+
+    }
+
+    &__block {
+        margin-top: 50px;
+        display: flex;
+        //gap: 10vw;
+
+        .workdone-page__box {
+            width: 9.5vw;
+            height: 7vh;
+            border-radius: 15px 0;
+            background-color: $white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 2vw 1vw;
+
+            .box-number {
+                font-size: large;
+                font-weight: 700;
+                font-family: $open-sans;
+            }
+
+            .box-name {
+                font-size: small;
+                font-family: $open-sans ;
+                font-weight: 600;
+            }
+        }
+
+        .line-top {
+            margin-top: 3.5vw;
+            width: 5vw;
+            height: 5vw;
+            border-top: 2px solid $line_color;
+            border-right: 2px solid $line_color;
+        }
+
+        .line-bottom {
+            margin-top: 3.5vw;
+            width: 5vw;
+            height: 5vw;
+            border-bottom: 2px solid $line_color;
+        }
+
+        div:nth-child(4),
+        div:nth-child(10) {
+            margin-top: 4.5vw;
+        }
+
+        div:nth-child(6) {
+            margin-top: 3.4vw;
+            border-left: 2px solid $line_color;
+            border-right: none;
+        }
+
+    }
+}
+
+/*страница с отзывами и слайдер */
+
+.hidden {
+    display: none;
+}
+
+.testimonials-page {
+    margin: 5vw 0;
+    padding: 5vw 15vw;
+    position: relative;
+
+    &__caption1 {
+        @include caption_small();
+        text-align: center;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 600);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__buttons {
+        width: 10vw;
+        position: absolute;
+        right: 150px;
+        top: 100px;
+
+        #testimonials-page__btnPrev,
+        #testimonials-page__btnNext {
+            cursor: pointer;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        gap: 10vw;
+        justify-content: center;
+
+
+        div {
+            width: 270px;
+            height: fit-content;
+            background-color: $white;
+            border-radius: 25px 0;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 25px 10px 30px 35px;
+            position: relative;
+
+            img {
+                border-radius: 20% 0;
+                width: 60px;
+                height: 60px;
+                bottom: 25px;
+                right: 290px;
+                position: absolute;
+                object-fit: cover;
+
+
+
+            }
+
+            .client-caption {
+                font-family: $open-sans;
+                font-weight: 700;
+                font-size: 1vw;
+                color: $black;
+                margin-bottom: 5px;
+            }
+
+            a,
+            p {
+                font-family: $open-sans;
+                font-weight: 500;
+                color: $grey;
+                font-size: 1vw;
+
+            }
+        }
+
+
+    }
+}
+
+/* страница с новостями */
+
+.news-page {
+    margin: 5vw 0;
+    padding: 5vw 15vw;
+
+    &__img-border {
+        @include img_border(28vw);
+        height: 19vw;
+    }
+
+    &__caption1 {
+        @include caption_small();
+        text-align: center;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 600);
+        text-align: center;
+    }
+
+    &__block {
+        display: grid;
+        gap: 13vw;
+        grid-template-columns: 26vw 26vw;
+        place-items: center;
+        padding: 5vh 0;
+
+        &-animation {
+            opacity: 0;
+            transform: translateY(0);
+            transition: all 0.4s;
+
+
+            &.show {
+                opacity: 1;
+                transform: translateY(50px);
+                transition: opacity, transform 0.6 linear;
+
+                &:nth-child(2) {
+                    transition-delay: 0.5s;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition-delay: 0s;
+
+                }
+            }
+        }
+
+
+        img {
+            @include img(28vw);
+            padding-bottom: 0.5vw;
+
+        }
+
+
+        a {
+            font-family: $open-sans;
+            font-weight: 600;
+            font-size: 1.5vw;
+        }
+
+        p {
+            @include text();
+            padding: 2vw 0;
+        }
+
+        button {
+            @include btn-green();
+
+        }
+    }
+}
+
+/* страница с формой */
+.form-page {
+    margin: 5vw 0;
+    padding: 5vw 15vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__caption {
+        @include caption_large(2vw, 500);
+        letter-spacing: 0.3vw;
+    }
+
+    &__text {
+        @include text();
+        padding: 3vw 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+
+        .input-block:first-child {
+            float: left;
+            padding: 0;
+
+        }
+
+        .input-block:nth-child(2) {
+            float: right;
+            padding: 0;
+
+        }
+    }
+
+    .form-input {
+        background-color: $dark_white;
+        color: $grey;
+        width: 13vw;
+        height: fit-content;
+        padding: 0.6vw;
+        margin: 2vw 4vw;
+        border-radius: 10px 0;
+        border: none;
+    }
+
+    .input-block #email {
+        width: 36vw;
+    }
+
+    button {
+        @include btn-green();
+
+    }
+
+    .error {
+        border-color: red;
+    }
+
+    .error-label {
+        display: block;
+        color: red;
+        margin-bottom: 10px;
+        width: 130px;
+        height: fit-content;
+        padding: 1vw;
+        margin: 0 4vw;
+        border: none;
+
+    }
+
+
+    .form-page .error-label :last-child {
+        width: auto;
+    }
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+
+    &__box {
+        max-width: 500px;
+        padding: 45px;
+        z-index: 1;
+        margin: 30px 15px;
+        background-color: $brown;
+        box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+        transform: scale(0);
+        transition: transform .8s;
+    }
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+
+        .modal__box {
+            transform: scale(1);
+        }
+    }
+
+    h2 {
+        @include caption_large(1vw, 500);
+    }
+
+    p {
+        @include caption_small();
+        color: $white;
+    }
+}
+
+/*footer и контакты*/
+.footer-page {
+    background-color: #F8F8F8;
+    display: grid;
+    grid-template-columns: 20vw 11vw 11vw 12vw 16vw;
+    padding: 5vw 15vw;
+
+    &__logo-text {
+        color: $grey;
+        font-family: $open-sans;
+        font-size: small;
+        margin: 1vw 0;
+    }
+
+    &__logo-img {
+        width: 9vw;
+    }
+
+    a {
+        color: $grey;
+        outline: none;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: small;
+        color: $grey;
+        list-style: none;
+        margin: 1vw 0;
+        font-family: $open-sans;
+    }
+
+    h4 {
+        font-weight: 600;
+    }
+
+    .social-media-logo {
+        width: 3vw;
+        margin: 1vw 0;
+    }
+}
+
+
+/*работа с апи погодой */
+.weather {
+    background-color: #F8F8F8;
+    padding: 5vw 15vw;
+    color: $black;
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    align-items: baseline;
+
+    button {
+        @include btn-green()
+    }
+
+    p {
+        @include caption_large(1vw, 500);
+    }
+
+}
+
+/*копирайт и счетчик до нового года */
+
+.copyright {
+    text-align: center;
+    padding: 3px 0;
+
+    &__line {
+        border-bottom: 1px solid $dark_white;
+
+    }
+
+    &__text,
+    &__new-year {
+        margin-top: 10px;
+        @include text();
+        font-size: 14px;
+
+        span {
+            color: $green;
+        }
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1040px) {
+    .service-page {
+        input[type="button"] {
+            width: 130px;
+        }
+
+        .block__category {
+            width: 200px;
+        }
+    }
+
+    .workdone-page {
+        padding: 5vw 10vw;
+    }
+
+    .form-page {
+
+        .error-label {
+            width: 100px;
+        }
+    }
+
+}
+
+@media (max-width:850px) {
+    .testimonials-page {
+        &__buttons {
+            width: 8vw;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 90px;
+
+            #testimonials-page__btnPrev,
+            #testimonials-page__btnNext {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .form-page {
+
+        .error-label {
+            width: 90px;
+        }
+    }
+
+}
+
+@media (max-width: 760px) {
+    .navbar__wrap {
+        .nav__menu {
+            display: none;
+        }
+
+        .nav__logo {
+            width: 30px;
+            padding-right: 30px;
+        }
+
+        .hamb {
+            display: flex;
+            align-items: center;
+
+            .hamb__field {
+                padding: 10px 20px;
+                cursor: pointer;
+
+                .bar {
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    margin: 6px auto;
+                    background-color: $pink;
+                    transition: 0.2s;
+                }
+
+                &.active {
+                    .bar {
+                        :first-child {
+                            transform: translateY(8px) rotate(45deg);
+                        }
+
+                        :nth-child(2) {
+                            opacity: 0
+                        }
+
+                        :nth-child(3) {
+                            transform: translateY(-8px) rotate(-45deg);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .popup {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $brown;
+        opacity: 0.8;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+
+        &.open {
+            left: 0;
+        }
+
+        .nav__menu {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 5px 0;
+            overflow: auto;
+
+            .nav__signin {
+                background-color: $white;
+                color: $pink;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 15px 0;
+                border: none;
+                width: auto;
+                min-width: 20px;
+                height: 20px;
+                cursor: pointer;
+                opacity: 1;
+            }
+
+            .menu__nav-link {
+                width: 100%;
+
+                a {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px 0;
+                    font-size: 15px;
+                    color: $white;
+                    text-decoration: none;
+                }
+
+                :hover {
+                    color: $green;
+                    border: solid $green;
+                }
+
+
+            }
+        }
+    }
+
+
+    body {
+        &.noscroll {
+            overflow: hidden;
+
+        }
+    }
+
+    .workdone-page {
+        display: none;
+    }
+}

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #E0E0E0;
+  z-index: 10;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+.preloader span {
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: #37806B;
+  margin: 0 7px;
+  border-radius: 10px;
+  -webkit-animation: 1.3s upDown infinite;
+          animation: 1.3s upDown infinite;
+}
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader span:first-child {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.preloader span:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.preloader span:nth-child(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.preloader span:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.preloader span:last-child {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes upDown {
+  0% {
+    height: 15px;
+    background: #CAA892;
+  }
+  25% {
+    height: 40px;
+    background: #CAA892;
+  }
+  50% {
+    height: 60px;
+    background: #37806B;
+  }
+  75% {
+    height: 40px;
+    background: #B0855B;
+  }
+  100% {
+    height: 15px;
+    background: #B0855B;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    height: 15px;
+    background: #CAA892;
+  }
+  25% {
+    height: 40px;
+    background: #CAA892;
+  }
+  50% {
+    height: 60px;
+    background: #37806B;
+  }
+  75% {
+    height: 40px;
+    background: #B0855B;
+  }
+  100% {
+    height: 15px;
+    background: #B0855B;
+  }
+}/*# sourceMappingURL=preloader.css.map */

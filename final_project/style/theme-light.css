@@ -1,0 +1,419 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+.theme {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+          box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+}
+
+/**навигация и header*/
+.navbar {
+  background-color: #ffffff;
+}
+.navbar .progress-bar {
+  background-color: #CAA892;
+}
+.navbar__wrap .nav__menu {
+  background-color: #ffffff;
+}
+.navbar__wrap .nav__menu .menu__nav-link :hover {
+  color: #37806B;
+  border: solid #37806B;
+  border-radius: 10px 0;
+}
+.navbar__wrap .nav__menu a {
+  color: #292929;
+  border: solid #ffffff;
+}
+.navbar__wrap .nav__menu .nav__signin {
+  background-color: #CAA892;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.go-top {
+  color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #B0855B;
+}
+
+/**главная страница */
+.main-page__caption1 {
+  padding-bottom: 13px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+}
+.main-page__caption2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4vw;
+}
+.main-page__text {
+  padding-bottom: 25px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(8px + 6 * (100vw - 320px) / 880);
+}
+.main-page button {
+  background-color: #37806B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0;
+  border: none;
+  color: #ffffff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*страница с сервисами */
+.service-page__caption1 {
+  padding-bottom: 13px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+}
+.service-page__caption2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+}
+.service-page__buttons input[type=button] {
+  background-color: #37806B;
+  color: #ffffff;
+}
+.service-page__buttons input[type=button].active {
+  border: solid #37806B;
+  color: #37806B;
+  background-color: #ffffff;
+}
+.service-page .block__category {
+  background-color: #CAA892;
+  color: #ffffff;
+  border-radius: 25px 0;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.service-page .block__category.interior, .service-page .block__category.planning {
+  background-color: #ffffff;
+  color: #212121;
+}
+
+/* про компанию*/
+.aboutus-page__caption1 {
+  padding-bottom: 13px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+}
+.aboutus-page button {
+  background-color: #37806B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0;
+  border: none;
+  color: #ffffff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.aboutus-page__caption2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+  margin-top: 5vw;
+}
+.aboutus-page__text {
+  padding-bottom: 25px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(8px + 6 * (100vw - 320px) / 880);
+}
+
+/* 20лет с компанией */
+.years-page__caption1 {
+  color: #B0855B;
+  background-image: url("img/img_news1.png");
+}
+.years-page button {
+  background-color: #37806B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0;
+  border: none;
+  color: #ffffff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.years-page__caption2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+  width: 20vw;
+}
+
+/*проекты которые были завершины  */
+.workdone-page {
+  background-color: #E0E0E0;
+}
+.workdone-page__caption {
+  text-align: center;
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+}
+.workdone-page__block .workdone-page__box {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.workdone-page__block .line-top {
+  border-top: 2px solid #B7B7B7;
+  border-right: 2px solid #B7B7B7;
+}
+.workdone-page__block .line-bottom {
+  border-bottom: 2px solid #B7B7B7;
+}
+.workdone-page__block div:nth-child(6) {
+  border-left: 2px solid #B7B7B7;
+}
+
+/*страница с отзывами и слайдер */
+.testimonials-page__caption1 {
+  padding-bottom: 13px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  text-align: center;
+}
+.testimonials-page__caption2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+}
+.testimonials-page__slider div {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.testimonials-page__slider div .client-caption {
+  color: #212121;
+}
+
+/* страница с новостями */
+.news-page__caption1 {
+  padding-bottom: 13px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  text-align: center;
+}
+.news-page__caption2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  text-align: center;
+}
+.news-page a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+}
+.news-page p {
+  padding-bottom: 25px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(8px + 6 * (100vw - 320px) / 880);
+  padding: 2vw 0;
+}
+.news-page button {
+  background-color: #37806B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0;
+  border: none;
+  color: #ffffff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* страница с формой */
+.form-page__caption {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+}
+.form-page__text {
+  padding-bottom: 25px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(8px + 6 * (100vw - 320px) / 880);
+}
+.form-page .form-input {
+  background-color: #E0E0E0;
+  color: #646464;
+}
+.form-page button {
+  background-color: #37806B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0;
+  border: none;
+  color: #ffffff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.form-page .error {
+  border-color: red;
+}
+.form-page .error-label {
+  color: red;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal__box {
+  background-color: #B0855B;
+  -webkit-box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+}
+.modal h2 {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1vw;
+}
+.modal p {
+  padding-bottom: 13px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  color: #ffffff;
+}
+
+/*footer и контакты*/
+.footer-page {
+  background-color: #F8F8F8;
+}
+.footer-page__logo-text {
+  color: #646464;
+}
+.footer-page a {
+  color: #646464;
+}
+.footer-page li {
+  color: #646464;
+}
+.footer-page h4 {
+  font-weight: 600;
+}
+
+/*работа с апи погодой */
+.weather {
+  background-color: #F8F8F8;
+  color: #212121;
+}
+.weather button {
+  background-color: #37806B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0;
+  border: none;
+  color: #ffffff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.weather p {
+  padding-bottom: 15px;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1vw;
+}
+
+/*копирайт и счетчик до нового года */
+.copyright__line {
+  border-bottom: 1px solid #E0E0E0;
+}
+.copyright__text, .copyright__new-year {
+  margin-top: 10px;
+  padding-bottom: 25px;
+  color: #646464;
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(8px + 6 * (100vw - 320px) / 880);
+  font-size: 14px;
+}
+.copyright__text span, .copyright__new-year span {
+  color: #37806B;
+}
+
+@media (max-width: 760px) {
+  .navbar__wrap .hamb .hamb__field .bar {
+    background-color: #CAA892;
+  }
+  .popup {
+    background-color: #B0855B;
+  }
+  .popup .nav__menu .nav__signin {
+    background-color: #ffffff;
+    color: #CAA892;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .popup .nav__menu .menu__nav-link a {
+    color: #ffffff;
+  }
+  .popup .nav__menu .menu__nav-link :hover {
+    color: #37806B;
+    border: solid #37806B;
+  }
+}/*# sourceMappingURL=theme-light.css.map */

@@ -1,0 +1,471 @@
+@import "var.scss";
+@import "mixins.scss";
+
+body {
+    background-color: $dark_bg;
+}
+
+
+.theme {
+    background: $dark_bg;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+
+}
+
+.navbar {
+
+    background-color: $dark_bg;
+
+    .progress-bar {
+
+        background-color: $brown;
+    }
+
+
+    &__wrap {
+
+        .nav__menu {
+
+            background-color: $dark_bg;
+
+            li {}
+
+            a {
+                color: $dark_text;
+                border: solid $dark_bg;
+
+            }
+        }
+    }
+
+    &__signin {
+        background-color: $pink;
+        color: $white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+
+}
+
+.go-top {
+
+    color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $pink;
+
+}
+
+
+
+.main-page {
+
+
+    &__caption1 {
+        @include caption_small()
+    }
+
+    &__caption2 {
+        @include caption_large(4vw, 600);
+        color: $dark_text;
+    }
+
+    &__text {
+        @include text();
+    }
+
+    button {
+        @include btn-green();
+        background-color: $pink;
+    }
+
+
+    img {}
+
+}
+
+.service-page {
+
+
+    &__caption1 {
+        @include caption_small();
+
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        color: $dark_text;
+    }
+
+    &__buttons {
+
+
+        input[type="button"] {
+            background-color: $pink;
+            color: $white;
+
+        }
+
+        &.active {
+            border: solid $pink;
+            color: $pink;
+            background-color: $dark_white;
+        }
+    }
+
+    .block__category {
+
+        background-color: $pink;
+        color: $dark_text;
+        border-radius: 25px 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+        &.interior,
+        &.planning {
+            background-color: $dark_white;
+            color: $black;
+        }
+
+
+    }
+
+
+
+}
+
+
+.aboutus-page {
+
+    img {
+        @include img(30vw);
+
+    }
+
+    &__caption1 {
+        @include caption_small();
+    }
+
+    button {
+        @include btn-green();
+        background-color: $pink;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        color: $dark_text;
+
+    }
+
+    &__text {
+        @include text();
+
+    }
+
+}
+
+.years-page {
+
+
+    &__caption1 {
+        color: $brown;
+        background-image: url("img/img_news1.png");
+        font-size: 14vw;
+        font-family: $open-sans;
+        font-weight: 700;
+    }
+
+    button {
+        @include btn-green();
+        background-color: $pink;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        color: $dark_text;
+
+    }
+
+}
+
+.workdone-page {
+
+    background-color: $dark_bg;
+
+    &__caption {
+
+        @include caption_large(2vw, 500);
+        color: $dark_text;
+
+    }
+
+    &__block {
+
+        .workdone-page-box {
+
+            background-color: $dark_white;
+            box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.4);
+
+            .box-number {
+                font-size: large;
+                font-weight: 700;
+                font-family: $open-sans;
+            }
+
+            .box-name {
+                font-size: small;
+                font-family: $open-sans ;
+                font-weight: 600;
+            }
+        }
+
+    }
+}
+
+.testimonials-page {
+
+    &__caption1 {
+        @include caption_small();
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 600);
+        color: $dark_text
+    }
+
+    &__slider {
+
+
+
+        div {
+
+            background-color: $dark_white;
+            box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.4);
+
+            .client-caption {
+                color: $black;
+
+            }
+        }
+
+
+    }
+}
+
+.news-page {
+
+    &__caption1 {
+        @include caption_small();
+        color: $dark_text;
+
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 600);
+        color: $dark_text;
+    }
+
+    &__block {
+
+        a {
+            font-family: $open-sans;
+            font-weight: 600;
+            font-size: 1.5vw;
+            color: $dark_text;
+        }
+
+        p {
+            @include text();
+            padding: 2vw 0;
+        }
+
+        button {
+            @include btn-green();
+            background-color: $pink;
+
+        }
+
+    }
+}
+
+.form-page {
+
+    &__caption {
+        @include caption_large(2vw, 500);
+        color: $dark_text;
+
+    }
+
+    &__text {
+        @include text();
+        padding: 3vw 0;
+    }
+
+    .form-name,
+    .form-surname {
+        background-color: $dark_text;
+        color: $white;
+
+    }
+
+    .form-email {
+        background-color: $dark_text;
+        color: $white;
+
+    }
+
+    input[type="submit"] {
+        @include btn-green();
+        background-color: $pink;
+
+    }
+
+    .error {
+        border-color: rgb(161, 7, 7);
+    }
+
+    .error-label {
+
+        color: rgb(100, 8, 8);
+
+    }
+}
+
+.modal {
+
+    background-color: rgba(0, 0, 0, .3);
+
+
+    &__box {
+
+        background-color: $brown;
+        box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+
+    }
+
+
+    h2 {
+        @include caption_large(1vw, 500);
+    }
+
+    p {
+        @include caption_small();
+        color: $white;
+    }
+}
+
+.footer-page {
+    background-color: $dark_bg;
+
+    &__logo-text {
+        color: $grey;
+
+    }
+
+
+    a {
+        color: $grey;
+        outline: none;
+        text-decoration: none;
+    }
+
+    li {
+
+        color: $grey;
+
+    }
+
+    h4 {
+        font-weight: 600;
+        color: $dark_text;
+    }
+
+    .social-media-logo {
+        margin: 1vw 0;
+    }
+
+
+}
+
+.weather {
+    background-color: $dark_bg;
+
+    color: $dark_text;
+
+
+    button {
+        @include btn-green()
+    }
+
+    p {
+        @include caption_large(1vw, 500);
+        color: $dark_text;
+    }
+
+}
+
+.copyright {
+
+
+    &__line {
+        border-bottom: 1px solid $grey;
+
+    }
+
+
+}
+
+@media (max-width: 760px) {
+    .navbar__wrap {
+
+
+        .hamb {
+
+
+            .hamb__field {
+
+
+                .bar {
+                    background-color: $pink;
+                }
+
+
+            }
+        }
+    }
+
+    .popup {
+
+        background-color: $brown;
+
+
+
+        .nav__menu {
+
+
+            .nav__signin {
+                background-color: $white;
+                color: $pink;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            }
+
+            .menu__nav-link {
+
+
+                a {
+
+                    color: $white;
+
+                }
+
+                :hover {
+                    color: $green;
+                    border: solid $green;
+                }
+
+
+            }
+        }
+    }
+
+}

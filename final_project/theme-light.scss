@@ -1,0 +1,483 @@
+@import "var.scss";
+@import "mixins.scss";
+
+
+.theme {
+
+    background: $white;
+    box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+}
+
+/**навигация и header*/
+
+.navbar {
+    background-color: $white;
+
+
+    .progress-bar {
+
+        background-color: $pink;
+    }
+
+
+    &__wrap {
+
+
+        .nav__menu {
+
+            background-color: $white;
+
+            .menu__nav-link {
+
+
+                :hover {
+                    color: $green;
+                    border: solid $green;
+                    border-radius: 10px 0;
+                }
+            }
+
+            a {
+                color: #292929;
+                border: solid $white;
+
+            }
+
+            .nav__signin {
+                background-color: $pink;
+                color: $white;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            }
+        }
+
+    }
+}
+
+
+
+.go-top {
+
+    color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    background-color: $brown;
+
+}
+
+
+
+/**главная страница */
+
+.main-page {
+
+    &__caption1 {
+        @include caption_small()
+    }
+
+    &__caption2 {
+        @include caption_large(4vw, 600)
+    }
+
+    &__text {
+        @include text();
+    }
+
+    button {
+        @include btn-green();
+    }
+
+
+}
+
+
+/*страница с сервисами */
+
+
+.service-page {
+
+
+
+    &__caption1 {
+        @include caption_small();
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500)
+    }
+
+    &__buttons {
+
+        input[type="button"] {
+            background-color: $green;
+            color: $white;
+
+
+            &.active {
+                border: solid $green;
+                color: $green;
+                background-color: $white;
+            }
+
+
+
+        }
+
+    }
+
+    .block__category {
+
+        background-color: $pink;
+        color: $white;
+        border-radius: 25px 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+        &.interior,
+        &.planning {
+            background-color: $white;
+            color: $black;
+        }
+
+
+    }
+}
+
+/* про компанию*/
+
+.aboutus-page {
+
+    &__caption1 {
+        @include caption_small();
+    }
+
+    button {
+        @include btn-green();
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        margin-top: 5vw;
+    }
+
+    &__text {
+        @include text();
+
+    }
+
+
+
+}
+
+/* 20лет с компанией */
+.years-page {
+
+
+    &__caption1 {
+        color: $brown;
+        background-image: url("img/img_news1.png");
+    }
+
+    button {
+        @include btn-green();
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 500);
+        width: 20vw;
+    }
+
+}
+
+/*проекты которые были завершины  */
+.workdone-page {
+
+    background-color: $dark_white;
+
+
+    &__caption {
+        text-align: center;
+        @include caption_large(2vw, 500);
+
+    }
+
+    &__block {
+
+
+        .workdone-page__box {
+
+            background-color: $white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .line-top {
+            border-top: 2px solid $line_color;
+            border-right: 2px solid $line_color;
+        }
+
+        .line-bottom {
+
+            border-bottom: 2px solid $line_color;
+        }
+
+        div:nth-child(6) {
+            border-left: 2px solid $line_color;
+
+        }
+
+    }
+}
+
+/*страница с отзывами и слайдер */
+
+
+.testimonials-page {
+
+    &__caption1 {
+        @include caption_small();
+        text-align: center;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 600);
+
+    }
+
+    &__slider {
+
+
+
+        div {
+
+            background-color: $white;
+
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            .client-caption {
+                color: $black;
+
+            }
+        }
+
+
+    }
+}
+
+/* страница с новостями */
+
+.news-page {
+
+
+    &__caption1 {
+        @include caption_small();
+        text-align: center;
+    }
+
+    &__caption2 {
+        @include caption_large(2vw, 600);
+        text-align: center;
+    }
+
+    a {
+        font-family: $open-sans;
+        font-weight: 600;
+        font-size: 1.5vw;
+    }
+
+    p {
+        @include text();
+        padding: 2vw 0;
+    }
+
+    button {
+        @include btn-green();
+
+    }
+}
+
+
+/* страница с формой */
+.form-page {
+
+
+    &__caption {
+        @include caption_large(2vw, 500);
+
+    }
+
+    &__text {
+        @include text();
+
+    }
+
+
+    .form-input {
+        background-color: $dark_white;
+        color: $grey;
+
+    }
+
+
+    button {
+        @include btn-green();
+
+    }
+
+    .error {
+        border-color: red;
+    }
+
+    .error-label {
+
+        color: red;
+
+    }
+
+}
+
+.modal {
+
+    background-color: rgba(0, 0, 0, .3);
+
+
+    &__box {
+
+        background-color: $brown;
+        box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+
+    }
+
+
+    h2 {
+        @include caption_large(1vw, 500);
+    }
+
+    p {
+        @include caption_small();
+        color: $white;
+    }
+}
+
+/*footer и контакты*/
+.footer-page {
+    background-color: #F8F8F8;
+
+    &__logo-text {
+        color: $grey;
+
+    }
+
+
+    a {
+        color: $grey;
+
+    }
+
+    li {
+
+        color: $grey;
+
+    }
+
+    h4 {
+        font-weight: 600;
+    }
+
+}
+
+
+/*работа с апи погодой */
+.weather {
+    background-color: #F8F8F8;
+
+    color: $black;
+
+
+    button {
+        @include btn-green()
+    }
+
+    p {
+        @include caption_large(1vw, 500);
+    }
+
+}
+
+/*копирайт и счетчик до нового года */
+
+.copyright {
+
+
+    &__line {
+        border-bottom: 1px solid $dark_white;
+
+    }
+
+    &__text,
+    &__new-year {
+        margin-top: 10px;
+        @include text();
+        font-size: 14px;
+
+        span {
+            color: $green;
+        }
+    }
+}
+
+
+@media (max-width: 760px) {
+    .navbar__wrap {
+
+
+        .hamb {
+
+
+            .hamb__field {
+
+
+                .bar {
+                    background-color: $pink;
+                }
+
+
+            }
+        }
+    }
+
+    .popup {
+
+        background-color: $brown;
+
+
+
+        .nav__menu {
+
+
+            .nav__signin {
+                background-color: $white;
+                color: $pink;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            }
+
+            .menu__nav-link {
+
+
+                a {
+
+                    color: $white;
+
+                }
+
+                :hover {
+                    color: $green;
+                    border: solid $green;
+                }
+
+
+            }
+        }
+    }
+
+}

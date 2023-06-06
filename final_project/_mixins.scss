@@ -1,0 +1,54 @@
+@mixin img($width) {
+    border-radius: 20% 0;
+    width: $width;
+    height: fit-content;
+    position: absolute;
+    z-index: 0;
+    bottom: 15px;
+    right: 20px;
+}
+
+@mixin img_border($width) {
+    position: relative;
+    z-index: -1;
+    width: $width;
+    border-radius: 20% 0;
+    border: 1px solid $brown;
+}
+
+@mixin caption_small() {
+    padding-bottom: 13px;
+    color: $grey;
+    font-family: $open-sans;
+    font-size: small;
+}
+
+@mixin text() {
+    padding-bottom: 25px;
+    color: $grey;
+    font-family: $open-sans;
+    font-size: calc(8px + 6 * (100vw - 320px) / 880);
+
+}
+
+@mixin caption_large($size, $weight) {
+    padding-bottom: 15px;
+    color: $black;
+    font-family: $poppins;
+    font-weight: $weight;
+    font-size: $size;
+
+}
+
+@mixin btn-green() {
+    background-color: $green;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0;
+    border: none;
+    color: $white;
+    height: 25px;
+    width: fit-content;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 12px;
+}
